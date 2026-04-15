@@ -18,7 +18,7 @@ public class NumberClassifier {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, -3, 0};
+        int[] arr = { 1, 2, -3, 0 };
         classifyNumbers(arr);
     }
 }
