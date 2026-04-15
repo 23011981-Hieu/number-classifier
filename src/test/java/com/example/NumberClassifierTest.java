@@ -23,4 +23,20 @@ public class NumberClassifierTest {
         assertTrue(result.contains("so am"));
         assertTrue(result.contains("So 0"));
     }
+
+    @Test
+    void branchCoverageTest() {
+
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
+
+        NumberClassifier.classifyNumbers(new int[] { 2, 3, -5, 0, 4, 7 });
+
+        String result = out.toString();
+
+        assertTrue(result.contains("so duong chan"));
+        assertTrue(result.contains("so duong le"));
+        assertTrue(result.contains("so am"));
+        assertTrue(result.contains("So 0"));
+    }
 }
