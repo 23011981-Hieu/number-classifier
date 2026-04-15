@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class NumberClassifierTest {
 
     @Test
-    void testStatementCoverage() {
+    void statementCoverageTest() {
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
@@ -18,10 +18,11 @@ public class NumberClassifierTest {
 
         String result = out.toString();
 
-        assertTrue(result.contains("so duong le"));
-        assertTrue(result.contains("so duong chan"));
-        assertTrue(result.contains("so am"));
-        assertTrue(result.contains("So 0"));
+        // Kiểm tra từng statement đã chạy
+        assertTrue(result.contains("so duong le")); // 1
+        assertTrue(result.contains("so duong chan")); // 2
+        assertTrue(result.contains("so am")); // 3
+        assertTrue(result.contains("So 0")); // 4
     }
 
     @Test
